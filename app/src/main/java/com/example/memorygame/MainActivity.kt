@@ -13,9 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        buttons = listOf()
-        imageButton2.setOnClickListener{
-            Log.i(TAG, "button clicked!")
+        buttons = listOf(imageButton10, imageButton2, imageButton11, imageButton12, imageButton13, imageButton14, imageButton15, imageButton16)
+        for(button in buttons)
+        {
+            button.setOnClickListener{
+                Log.i(TAG, "button clicked!")
+            }
         }
     }
 }
