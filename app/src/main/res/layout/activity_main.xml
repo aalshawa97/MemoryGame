@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="88dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_weight="@integer/material_motion_duration_long_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="192dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="192dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/imageButton10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="380dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/imageButton12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="380dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="576dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="576dp"
+        android:contentDescription="@string/memory_button"
+        android:minHeight="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/imageButton13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
