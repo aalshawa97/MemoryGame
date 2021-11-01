@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
 import kotlinx.android.synthetic.main.activity_main.*
+import com.example.memorygame.R.drawable;
 
 private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
@@ -13,11 +14,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val images = mutableListOf(drawable.ic_blue_lightning, drawable.ic_code, drawable.ic_heart, drawable.ic_lightning, drawable.ic_plane, drawable.ic_smiley)
+        //Add each image twice so we can create pairs
+        images.addAll(images)
+        //Randomize the order of images
+        images.shuffle()
         buttons = listOf(imageButton10, imageButton2, imageButton11, imageButton12, imageButton13, imageButton14, imageButton15, imageButton16)
-        for(button in buttons)
-        {
+        buttons.forEachIndexed{index, button ->
             button.setOnClickListener{
                 Log.i(TAG, "button clicked!")
+                button.setImageResource(images[index])
+
             }
         }
     }
