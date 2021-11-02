@@ -10,6 +10,7 @@ import com.example.memorygame.R.drawable;
 private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
     private lateinit var buttons: List<ImageButton>
+    private lateinit var cards: List<MemoryCard>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,10 +21,22 @@ class MainActivity : AppCompatActivity() {
         //Randomize the order of images
         images.shuffle()
         buttons = listOf(imageButton10, imageButton2, imageButton11, imageButton12, imageButton13, imageButton14, imageButton15, imageButton16)
+        cards = buttons.indices.map { index->
+            MemoryCard(images[index])
+        }
         buttons.forEachIndexed{index, button ->
             button.setOnClickListener{
                 Log.i(TAG, "button clicked!")
-                button.setImageResource(images[index])
+                val card = cards[index]
+                card.isFaceUp = !card.isFaceUp
+                if(card.isFaceUp)
+                {
+                    button.setImageResource(images[index])
+                }
+                else
+                {
+                    button.setImageResource(drawable.ic_code)
+                }
 
             }
         }
