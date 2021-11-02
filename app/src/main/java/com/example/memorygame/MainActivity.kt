@@ -27,10 +27,23 @@ class MainActivity : AppCompatActivity() {
         buttons.forEachIndexed{index, button ->
             button.setOnClickListener{
                 Log.i(TAG, "button clicked!")
-                val card = cards[index]
-                card.isFaceUp = !card.isFaceUp
-                button.setImageResource(if (card.isFaceUp) images[index] else drawable.ic_code)
+                //Update models
+                updateModels(index)
+                //Update the UI for the game
+                updateViews()
             }
         }
+    }
+
+    private fun updateViews() {
+        cards.forEachIndexed { index, card ->
+            val button = buttons[index]
+            button.setImageResource(if (card.isFaceUp) card.identifier else drawable.ic_code)
+        }
+    }
+
+    private fun updateModels(position: Int) {
+        val card = cards[position]
+        card.isFaceUp = !card.isFaceUp
     }
 }
