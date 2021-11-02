@@ -29,15 +29,7 @@ class MainActivity : AppCompatActivity() {
                 Log.i(TAG, "button clicked!")
                 val card = cards[index]
                 card.isFaceUp = !card.isFaceUp
-                if(card.isFaceUp)
-                {
-                    button.setImageResource(images[index])
-                }
-                else
-                {
-                    button.setImageResource(drawable.ic_code)
-                }
-
+                button.setImageResource(if (card.isFaceUp) images[index] else drawable.ic_code)
             }
         }
     }
